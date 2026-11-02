@@ -3,6 +3,7 @@ Student: ST10519525 Tihanca Leeu
 Module: WEDE5020 | Lecturer: Rhulani Kobeni
 
 Live Site: https://tihanca2005-debug.github.io/StoryVerse-WebsitePart3/
+
 GitHub Repo: https://github.com/tihanca2005-debug/StoryVerse-WebsitePart3
 
 ## Changelog Part 2 to Part 3
