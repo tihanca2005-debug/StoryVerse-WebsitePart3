@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StoryVerse | Products - Books R180-R300 & Movies R40/3days</title>
+<meta name="description" content="Browse StoryVerse collection: 8 books to buy like Hunger Games, Harry Potter and 8 movies to rent like Twilight, Wonder, Mean Girls. CSS Grid with search filter and lightbox gallery.">
+<meta name="keywords" content="StoryVerse products, books to buy, movies to rent, CSS Grid products page, search filter, lightbox gallery, ST10519525">
+<meta name="author" content="ST10519525 Tihanca Leeu">
+<link rel="stylesheet" href="css/style.css">
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+</head>
+<body>
+<header>
+<div class="logo"><img src="images/logo.png" alt="StoryVerse logo" style="height:40px;"> StoryVerse</div>
+<div class="hamburger" onclick="toggleMenu()">MENU</div>
+<nav><ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html" class="active">Products</a></li><li><a href="services.html">Services</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+</header>
+<div class="container">
+<h1>Our Collection</h1>
+<input type="text" id="searchInput" onkeyup="searchCollection()" placeholder="Search books or movies…" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;">
+<div id="myModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9);">
+<span class="close" onclick="closeModal()" style="color:#fff; font-size:40px; position:absolute; right:25px; top:10px; cursor:pointer;">&times;</span>
+<div style="margin:auto; width:80%; max-width:700px; margin-top:60px; text-align:center;">
+<img id="modalImg" style="width:100%; border-radius:10px;">
+<div id="caption" style="color:white; padding:10px;"></div>
+</div></div>
+<h2>Books - Available to Buy</h2>
+<div class="grid">
+<div class="card product-card"><img src="images/book1.jpg" alt="StoryVerse The Hunger Games book by Suzanne Collins - available to buy R200 at Braamfontein store" onclick="openModal();currentSlide(1)"><h3>The Hunger Games</h3><p>Suzanne Collins</p><p><b>R200</b></p></div>
+<div class="card product-card"><img src="images/book2.jpg" alt="StoryVerse The Notebook book by Nicholas Sparks - romantic book available to buy R220" onclick="openModal();currentSlide(2)"><h3>The Notebook</h3><p>Nicholas Sparks</p><p><b>R220</b></p></div>
+<div class="card product-card"><img src="images/book3.jpg" alt="StoryVerse The Da Vinci Code book by Dan Brown - thriller available R220" onclick="openModal();currentSlide(3)"><h3>The Da Vinci Code</h3><p>Dan Brown</p><p><b>R220</b></p></div>
+<div class="card product-card"><img src="images/book4.jpg" alt="StoryVerse The Golden Compass book by Phillip Pullman - fantasy R250" onclick="openModal();currentSlide(4)"><h3>The Golden Compass</h3><p>Phillip Pullman</p><p><b>R250</b></p></div>
+<div class="card product-card"><img src="images/book5.jpg" alt="StoryVerse Harry Potter book by J.K. Rowling - fantasy book R300 at StoryVerse" onclick="openModal();currentSlide(5)"><h3>Harry Potter</h3><p>J.K. Rowling</p><p><b>R300</b></p></div>
+<div class="card product-card"><img src="images/book6.jpg" alt="StoryVerse The Help book by Kathryn Stockett - drama R200" onclick="openModal();currentSlide(6)"><h3>The Help</h3><p>Kathryn Stockett</p><p><b>R200</b></p></div>
+<div class="card product-card"><img src="images/book7.jpg" alt="StoryVerse I Am Legend book by Richard Matheson - sci-fi R180" onclick="openModal();currentSlide(7)"><h3>I Am Legend</h3><p>Richard Matheson</p><p><b>R180</b></p></div>
+<div class="card product-card"><img src="images/book8.jpg" alt="StoryVerse How To Train Your Dragon book by Cressida Cowell - children's book R200" onclick="openModal();currentSlide(8)"><h3>How To Train Your Dragon</h3><p>Cressida Cowell</p><p><b>R200</b></p></div>
+</div>
+<h2 style="margin-top:50px;">Movies - Available to Rent</h2>
+<div class="grid">
+<div class="card product-card"><img src="images/movie1.jpg" alt="StoryVerse The Last Song movie Drama Romance - available to rent R50 for 3 days" onclick="openModal();currentSlide(9)"><h3>The Last Song</h3><p>Drama, Romance</p><p><b>R50 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie2.jpg" alt="StoryVerse Twilight movie Fantasy Romance - rent R50 for 3 days" onclick="openModal();currentSlide(10)"><h3>Twilight</h3><p>Fantasy, Romance</p><p><b>R50 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie3.jpg" alt="StoryVerse Percy Jackson movie Adventure Fantasy - rent R40" onclick="openModal();currentSlide(11)"><h3>Percy Jackson</h3><p>Adventure, Fantasy</p><p><b>R40 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie4.jpg" alt="StoryVerse The Devil Wears Prada movie Comedy Drama - rent R45" onclick="openModal();currentSlide(12)"><h3>The Devil Wears Prada</h3><p>Comedy, Drama</p><p><b>R45 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie5.jpg" alt="StoryVerse Mean Girls movie Teen Comedy - rent R40" onclick="openModal();currentSlide(13)"><h3>Mean Girls</h3><p>Teen, Comedy</p><p><b>R40 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie6.jpg" alt="StoryVerse The Prince of Egypt movie Animation - rent R40" onclick="openModal();currentSlide(14)"><h3>The Prince of Egypt</h3><p>Animation</p><p><b>R40 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie7.jpg" alt="The Little Mermaid movie Fantasy - rent R40" onclick="openModal();currentSlide(15)"><h3>The Little Mermaid</h3><p>Fantasy</p><p><b>R40 / 3 days</b></p></div>
+<div class="card product-card"><img src="images/movie8.jpg" alt="Wonder movie Drama Family - rent R50 for 3 days" onclick="openModal();currentSlide(16)"><h3>Wonder</h3><p>Drama, Family</p><p><b>R50 / 3 days</b></p></div>
+</div>
+<p id="dateTime"></p>
+</div>
+<footer><p>&copy; 2026 StoryVerse | ST10519525</p></footer>
+<script src="js/script.js"></script>
+</body>
+</html>
+
