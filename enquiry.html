@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StoryVerse | Enquiry - Ask About Cost & Availability</title>
+<meta name="description" content="Enquire about StoryVerse books and movies cost and availability. Student-friendly prices. Response within 24 hours.">
+<meta name="keywords" content="StoryVerse enquiry, book cost availability, movie rental cost, ST10519525">
+<meta name="author" content="ST10519525 Tihanca Leeu">
+<link rel="stylesheet" href="css/style.css">
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+</head>
+<body>
+<header>
+<div class="logo"><img src="images/logo.png" alt="StoryVerse logo” style=”height:40px;"> StoryVerse</div>
+<div class="hamburger" onclick="toggleMenu()">MENU</div>
+<nav><ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="enquiry.html" class="active">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+</header>
+<div class="container">
+<h1>Enquiry Form</h1>
+<p>Ask us about book prices, movie rental availability, student discounts at StoryVerse Braamfontein.</p>
+<form onsubmit="return validateForm(event)">
+<label>Full Name</label><input type="text" id="name" placeholder="e.g. Tihanca Leeu" required>
+<label>Email Address</label><input type="email" id="email" placeholder="e.g. you@email.com" required>
+<label>Enquiry Type</label>
+<select id="serviceType" style="width:100%; padding:10px; border-radius:6px;">
+<option>Book Sale - Cost & Availability</option>
+<option>Movie Rental - Cost & Availability</option>
+<option>Study Space Booking</option>
+<option>General Enquiry</option>
+</select>
+<label>Your Message</label><textarea id="message" placeholder="Ask about cost and availability…" rows="5" required></textarea>
+<p id="errorMsg"></p><p id="formResponse"></p>
+<button type="submit" class="btn">Submit Enquiry</button>
+</form>
+<p id="dateTime"></p>
+</div>
+<footer><p>&copy; 2026 StoryVerse | ST10519525</p></footer>
+<script src="js/script.js"></script>
+</body>
+</html>
+
